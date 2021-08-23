@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .box div,section {
+        width: 100px;
+        height: 40px;
+        background-color: darkolivegreen;
+        margin: 3px 0;
+    }
+
+    .box div:first-of-type {
+        background-color: red;
+    }
+    .box div:last-of-type{
+        background-color: royalblue;
+    }
+    .box div:nth-of-type(2n){
+        background-color: yellow;
+    }
+    .box section:only-of-type{
+        background-color: violet;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <section></section>
+    </div>
+</body>
+
+</html>

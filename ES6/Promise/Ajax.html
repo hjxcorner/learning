@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const getJSON = function(url) {
+    const promise = new Promise(function(resolve, reject){
+      const handler = function() {
+        console.log(this.readyState)
+        if (this.readyState !== 4) {
+          return;
+        }
+        if (this.status === 200) {
+          resolve(this.response);
+        } else {
+          reject(new Error(this.statusText));
+        }
+      };
+      const client = new XMLHttpRequest();
+      client.open("GET", url);
+      client.onreadystatechange = handler;
+      client.responseType = "json";
+      client.setRequestHeader("Accept", "application/json");
+      client.send();
+  
+    });
+  
+    return promise;
+  };
+  
+  getJSON("http://127.0.0.1:3000/api/goods/id?id=1").then(function(json) {
+    console.log(json);
+    return getJSON("http://127.0.0.1:3000/api/goods/id?id=2")
+  }, function(error) {
+    console.error('出错了', error);
+  })
+  .then(value => {
+    console.log(value)
+  })
+</script>
+</html>

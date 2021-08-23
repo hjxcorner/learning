@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .big-box{
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        margin: 200px auto;
+        overflow: hidden;
+    }
+    .big-box::after{
+        display: block;
+        content: "hello";
+        width: 200px;
+        height: 200px;
+        background-color: chocolate;
+        line-height: 200px;
+        text-align: center;
+        transform-origin: left bottom;
+        transform: rotate(180deg);
+        transition: 0.6s all;
+    }
+    .big-box:hover::after{
+        transform: rotate(0deg);
+    }
+</style>
+<body>
+    <div class="big-box">
+
+    </div>
+</body>
+</html>

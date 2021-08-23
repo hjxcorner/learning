@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="btn">点击获取信息</button>
+        <p id="res"></p>
+    </div>
+</body>
+
+<script>
+
+    // 创建ajax对象 以及兼容性处理
+    let xmlhttp
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+
+    xmlhttp.onreadystatechange = function () {
+        console.log("hh")
+        // console.log(xmlhttp.readyState)
+
+    }
+
+
+
+    xmlhttp.open("get", "http://localhost:3000/", true)
+    xmlhttp.setRequestHeader("Cache-Control", "max-age=100")
+    xmlhttp.send(null)  //post请求才会用到
+
+
+
+
+    let btn = document.getElementById("btn")
+    let p = document.getElementById("res")
+    btn.addEventListener("click", () => {
+        p.innerHTML = xmlhttp.responseText
+    })
+
+
+</script>
+
+</html>

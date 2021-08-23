@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        perspective: 400px;
+    }
+    .box{
+        width: 200px;
+        height: 100px;
+        margin: 100px auto;
+        transform-style: preserve-3d;
+        transition: 10s all;
+    }
+    .box:hover{
+        transform: rotateX(90deg);
+    }
+    .forword,.back{
+        width: 50%;
+        height: 50%;
+        color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+    }
+    .forword{
+        background-color: cyan;
+    }
+    .back{
+        background-color: darkkhaki;
+
+        transform: translateY(-50%) rotateX(-90deg);
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="forword">嘿嘿嘿</div>
+        <div class="back">我来了</div>
+    </div>
+</body>
+</html>

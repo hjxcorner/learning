@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        border: solid red 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div id="box">
+        ssss
+    </div>
+</body>
+
+<script>
+    let box = document.getElementById("box")
+    let x = box.offsetLeft  // 相对于最近的定位父元素的左偏移量
+    let y = box.offsetTop  // 相对于最近定位父元素的上偏移量
+    console.log(x, y)
+    console.log(box.offsetParent)
+    console.log(typeof box)
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        display: flex;
+        width: 100%;
+        height: 500px;
+    }
+    .main > div {
+        flex-grow: 1;
+        background-color: red;
+        margin: 10px;
+    }
+    #center{
+        flex-grow: 2;
+    }
+
+    /* flex-grow 默认值为0 当不为0时 会将父元素的剩余空间占满  然后根据份数 规定具体的宽度*/
+</style>
+
+<body>
+    <article class="main">
+        <div class="left">左</div>
+        <div id="center">中
+            <h2>浮动布局</h2>
+        </div>
+        <div class="right">右</div>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 249px;
+        height: 250px;
+        position: relative;
+        margin: auto;
+        top: 200px;
+        background-color: brown;
+        transform-origin: left bottom;
+        transition: 0.6s all;
+    }
+    .box:hover{
+        
+        transform: rotate(90deg);   
+        
+    }
+
+
+</style>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- transform-origin: x y 可设置旋转的中心点 
+    注意:
+         1.x y 用空格隔开
+         2.可以跟方位名词：left right bottom top center
+         3.可以是像素-->

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        height: 100px;
+        background-color: coral;
+    }
+
+    .container {
+        padding: 0 200px;
+    }
+
+    .container::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .middle,
+    .left,
+    .right {
+        height: 300px;
+        float: left;
+        position: relative;
+    }
+
+    .middle {
+
+        width: 100%;
+        background-color: cornflowerblue;
+    }
+
+    .left {
+        width: 200px;
+        background-color: crimson;
+        margin-left: -100%;
+        left: -200px;
+    }
+
+    .right {
+        /* 这里的margin是右盒子的宽度 */
+        width: 200px;
+        margin-left: -200px;
+        background-color: darkcyan;
+        right: -200px;
+    }
+
+    .footer {
+        height: 100px;
+        background-color: darkgreen;
+    }
+</style>
+
+<body>
+    <div class="header">header</div>
+    <div class="container">
+        <div class="middle">middle</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

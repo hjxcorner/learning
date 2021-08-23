@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            width: 100px;
+            height: 200px;
+            background: pink;
+            padding: 100px;
+            border: 80px solid red;
+            background-image: url("../../image/timg.jpg");
+            background-repeat: no-repeat;
+            background-position: -50px 0; /*向x轴移动 -50px 向y轴移动0px*/
+            background-origin: content-box; /*设置背景图片起始源的位置*/
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+
+<script>
+    window.onload = function (){
+
+    }
+</script>
+</html>

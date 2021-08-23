@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: blueviolet;
+        width: 200px;
+        height: 200px;
+        transform: translate(100px,100px);
+        /* transform: translateX(100px); */
+        /* transform: translateY(100px); */
+    }
+</style>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
+
+
+<!-- 注意：
+        translate/translateX/translateY
+        1.不会影响其他元素的布局
+        2.在X/Y轴移动时使用百分比分别相对于自身的宽度/高度
+        3.使用translateX/translateY时后面的会将前面的覆盖，要想在两个方向上同时移动使用 translate()
+        4.对行内标签没有效果
+    -->

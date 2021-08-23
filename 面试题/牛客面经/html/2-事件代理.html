@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li id="li1">第一个</li>
+        <li id="li2">第二个</li>
+        <li id="li3">第三个</li>
+    </ul>
+</body>
+<script>
+    let ul = document.getElementById("ul")
+
+    ul.addEventListener("click",function(event){
+        // console.log(event)
+        let id = event.target.id
+
+        switch(id){
+            case "li1":
+                console.log(id)
+                break
+            case "li2":
+                console.log(id)
+                break
+            case "li3":
+                console.log(id)
+                break
+        }
+    })
+
+</script>
+</html>

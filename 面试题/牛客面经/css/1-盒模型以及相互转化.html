@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{margin: 0; padding: 0;}
+    .box1{
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+        border: 5px solid red;
+        padding: 20px 50px 30px;  /*只写三个参数，则中间的为左右边距，第一和第四分别为上和下*/  
+        margin: 5px 10px 20px; /*只写三个参数，则中间的为左右边距，第一和第四分别为上和下*/  
+        box-sizing: content-box;   /*默认值*/
+    }
+
+    .box2{
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+        border: 5px solid red;
+        padding: 20px 50px 30px;  /*只写三个参数，则中间的为左右边距，第一和第四分别为上和下*/  
+        margin: 5px 10px 20px; /*只写三个参数，则中间的为左右边距，第一和第四分别为上和下*/
+        box-sizing: border-box;  
+    }
+</style>
+<body>
+    <div class="box1">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+</body>
+</html>
+
+
+<!-- 标准盒模型：padding和border不包含在宽高之内 element width = width
+怪异盒模型：padding和border包含在宽高之内 element width = 左边框 + 右边框 + 左内边距 + 右内边距 + 内容高度
+
+两种模型的转化：
+    box-sizing: content-box(默认值，标准模型)/border-box(怪异模型)/inherit(继承父元素) -->

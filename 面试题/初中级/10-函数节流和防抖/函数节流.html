@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 500%;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    /*
+        fn:要被节流的函数
+        delay:规定的时间
+
+    */
+    function throttle(fn, delay) {
+        // 记录函数上一次触发的时间
+        let lastTime = 0
+        return function () {
+            //记录当前函数触发的时间
+            let nowTime = Date.now()
+            if (nowTime - lastTime > delay) {
+                fn()
+                //同步时间
+                lastTime = nowTime
+            }
+        }
+    }
+    window.onscroll = throttle(
+        function () {
+            console.log("节流函数被触发" + Date.now())
+        },
+        20000
+    )
+</script>
+
+</html>

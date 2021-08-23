@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+  function throttle(fn, wait, ...args) { // 节流函数
+    let pre = Date.now();
+    return () => {
+      const context = this;
+      const now = Date.now();
+      if (now - pre >= wait) {
+        fn.apply(context, args);
+        pre = Date.now();
+      }
+    };
+  }
+  function handle(a, b, c) {
+    console.log(Math.random());
+    console.log(a, b, c);
+  }
+
+  window.addEventListener("mousemove", throttle(handle, 1000, 1, 2, 3));
+</script>
+
+</html>

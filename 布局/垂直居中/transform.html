@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    width: 400px;
+    height: 400px;
+    border: 1px solid red;
+    /* text-align: center; */
+}
+
+.childBox{
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+</style>
+<body>
+    <div class="box">
+        <div class="childBox"></div>
+    </div>
+</body>
+</html>
